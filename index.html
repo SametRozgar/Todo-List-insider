@@ -3,11 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Todo List</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+    <section>
+        <h1>Görev Listesi</h1>
+        
+        <div class="add-todo-form">
+            <form id="todo-form">
+                <label for="todo-title-input">
+                    Başlık<span>*</span>: <input required id="todo-title-input" type="text">
+                </label>
+                <label for="todo-description-input">
+                    Açıklama: <input id="todo-description-input" type="text">
+                </label>
 
-    <script></script>
+                <div class="priority">
+                    Öncelik: 
+                    <label><input name="priority" value="High" type="radio"> Yüksek</label>
+                    <label><input name="priority" value="Medium" type="radio"> Orta</label>
+                    <label><input name="priority" value="Low" type="radio"> Düşük</label>
+                </div>
+
+                <div class="form-buttons">
+                    <button id="add-todo-button" type="submit">Görev Ekle</button>
+                    <button type="button" id="cancel-edit-button">İptal</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="controls">
+            <button id="filter-completed">Tamamlananları Göster</button>
+            <button id="filter-incomplete">Tamamlanmayanları Göster</button>
+            <button id="filter-all">Tümünü Göster</button>
+            <select id="sort-priority">
+                <option value="high-low">Öncelik: Yüksek → Düşük</option>
+                <option value="low-high">Öncelik: Düşük → Yüksek</option>
+            </select>
+        </div>
+    </section>
+    <div class="todo-container"></div>
+
+    <script src="js/app.js"></script>
 </body>
 </html>
